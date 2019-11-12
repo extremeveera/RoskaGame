@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color: Tomato;}
+h1   {color: White;}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button {
+  background-color: #ffa500;
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button:hover {
+  background-color: Yellow;
+}
+h1 {text-align: center;}
+p  {text-align: center;}
+</style>
+<script>
+function validateForm(){
+	if(document.forms["MyForm"]["name"].value==null || document.forms["MyForm"]["name"].value=="")
+	{
+		alert("Anna nimesi aloittaaksesi seikkailun!");
+		return false;
+	}
+
+	return true;
+}
+</script>
+</head>
+<body>
+
+<h1>CHALLENGE 1</h1>
+<p>Kerro nimesi</p>
+<img src="Jaskahead1.png" alt="Picture of Jaska" width="100" height="100">
+<br>
+
+<form name = "MyForm" method="post" onsubmit = "return validateForm()">
+  Nimi:<br>
+  <input type="text" name="name">
+  <input type="submit" value="Click to Submit" />
+</form>
+<br>
+<button class="button">Vahvista nimi</button>
+
+</body>
+</html>
